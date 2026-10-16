@@ -41,10 +41,10 @@ jobs:
 
           # ── Base: header only ───────────────────────────────────────────
           # Shows aggregate totals (commits, PRs, issues, repos contributed
-          # to) across all repos including private ones.
+          # to). GitHub tracks private contributions server-side so these
+          # counts include private repos — no repo-level access needed.
           # Excludes: activity feed, community orgs, repository list.
           base: header
-          base_indepth: yes
 
           # ── Full-year contribution calendar ─────────────────────────────
           # Heatmap of daily contribution counts. No repo names shown.
