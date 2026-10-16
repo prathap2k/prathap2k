@@ -1,6 +1,10 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Prathap&fontSize=64&fontColor=ffffff&fontAlignY=36&desc=Enterprise%20Integration%20Architect%20%C2%B7%20AI%20Platforms&descSize=18&descAlignY=58&animation=fadeIn" width="100%" />
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/main/prathap2k-banner.svg" width="100%" />
+</p>
+
+<p align="center">
   <a href="https://github.com/prathap2k">
     <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=3000&pause=800&color=2EA44F&center=true&vCenter=true&width=720&lines=Agentic+AI+on+the+JVM;Production+RAG+%C2%B7+Spring+AI+%C2%B7+LangChain4j;Cloud-native+integration+architecture;25%2B+years+of+Enterprise+Integration+Patterns" />
   </a>
