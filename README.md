@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Prathap&fontSize=64&fontColor=ffffff&fontAlignY=36&desc=Enterprise%20Integration%20Architect%20%C2%B7%20AI%20Platforms&descSize=18&descAlignY=58&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Prathap&fontSize=58&fontFamily=Orbitron&fontColor=ffffff&stroke=39d353&strokeWidth=1&fontAlignY=36&desc=Enterprise%20Integration%20Architect%20%C2%B7%20AI%20Platforms&descSize=18&descAlignY=58&animation=fadeIn" width="100%" />
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/main/prathap2k-banner.svg" width="100%" />
