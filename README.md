@@ -11,7 +11,6 @@
 <p align="center">
   <a href="https://www.linkedin.com/in/YOUR-HANDLE"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prathap2k/prathap2k/data/org-count.json&style=for-the-badge&logo=github&logoColor=white" />
-  <img src="https://komarev.com/ghpvc/?username=prathap2k&style=for-the-badge&color=2c5364&label=PROFILE+VIEWS" />
 </p>
 
 ---
