@@ -49,15 +49,24 @@ jobs:
             PAGE=$((PAGE + 1))
           done
           echo "Org count: $TOTAL"
-          # Write shields.io endpoint JSON — count only, no org names
-          jq -n --arg msg "$TOTAL" \
-            '{ schemaVersion:1, label:"ORGANIZATIONS", message:$msg, color:"2c5364" }' \
-            > org-count.json
+          echo "ORG_TOTAL=$TOTAL" >> "$GITHUB_ENV"
 
-      - name: Commit org count
+      # main is ruleset-protected (PR-only), so the badge data lives on a
+      # dedicated `data` branch. Not `output`: the snake job force-replaces it.
+      - name: Commit org count to data branch
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git fetch --depth 1 origin data 2>/dev/null; then
+            git checkout -B data FETCH_HEAD
+          else
+            git checkout --orphan data
+            git rm -rfq .
+          fi
+          # Write shields.io endpoint JSON — count only, no org names
+          jq -n --arg msg "$ORG_TOTAL" \
+            '{ schemaVersion:1, label:"ORGANIZATIONS", message:$msg, color:"2c5364" }' \
+            > org-count.json
           git add org-count.json
           git diff --staged --quiet || git commit -m "Update org count [skip ci]"
-          git push
+          git push origin data
