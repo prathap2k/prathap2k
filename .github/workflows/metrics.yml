@@ -49,57 +49,24 @@ jobs:
             PAGE=$((PAGE + 1))
           done
           echo "Org count: $TOTAL"
-          # Write shields.io endpoint JSON — count only, no org names
-          jq -n --arg msg "$TOTAL" \
-            '{ schemaVersion:1, label:"ORGANIZATIONS", message:$msg, color:"2c5364" }' \
-            > org-count.json
+          echo "ORG_TOTAL=$TOTAL" >> "$GITHUB_ENV"
 
-      - name: Commit org count
+      # main is ruleset-protected (PR-only), so the badge data lives on a
+      # dedicated `data` branch. Not `output`: the snake job force-replaces it.
+      - name: Commit org count to data branch
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git fetch --depth 1 origin data 2>/dev/null; then
+            git checkout -B data FETCH_HEAD
+          else
+            git checkout --orphan data
+            git rm -rfq .
+          fi
+          # Write shields.io endpoint JSON — count only, no org names
+          jq -n --arg msg "$ORG_TOTAL" \
+            '{ schemaVersion:1, label:"ORGANIZATIONS", message:$msg, color:"2c5364" }' \
+            > org-count.json
           git add org-count.json
           git diff --staged --quiet || git commit -m "Update org count [skip ci]"
-          git push
-
-  # ── Aggregated stats (includes private repos, no private details exposed) ─
-  stats:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: lowlighter/metrics@latest
-        with:
-          # PAT with "All repositories / Contents: Read + Metadata: Read"
-          # so the action can see private repos for aggregate counting.
-          # Only the rendered SVG is committed; raw data never leaves GitHub.
-          token: ${{ secrets.METRICS_TOKEN }}
-          user: prathap2k
-          template: classic
-
-          # ── Base: header only ───────────────────────────────────────────
-          # Shows aggregate totals (commits, PRs, issues, repos contributed
-          # to). GitHub tracks private contributions server-side so these
-          # counts include private repos — no repo-level access needed.
-          # Excludes: activity feed, community orgs, repository list.
-          base: header
-
-          # ── Full-year contribution calendar ─────────────────────────────
-          # Heatmap of daily contribution counts. No repo names shown.
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
-
-          # ── Language mix as percentages ──────────────────────────────────
-          # Scans all repos (including private) and reports language share.
-          # No repo names are included in the output.
-          plugin_languages: yes
-          plugin_languages_limit: 8
-          plugin_languages_ignored: >-
-            html, css, tex, less, dockerfile, makefile, handlebars
-
-          # ── Commit rendered SVG to this repo ────────────────────────────
-          output_action: commit
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
-          committer_branch: main
-          filename: metrics.svg
-
-          config_timezone: America/Chicago
-          config_padding: 10
+          git push origin data
