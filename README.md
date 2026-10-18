@@ -1,5 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Prathap&fontSize=58&fontFamily=Orbitron&fontColor=ffffff&stroke=39d353&strokeWidth=1&fontAlignY=36&desc=Enterprise%20Integration%20Architect%20%C2%B7%20AI%20Platforms&descSize=18&descAlignY=58&animation=fadeIn" width="100%" />
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/main/prathap2k-banner.svg" width="100%" />
 </p>
@@ -46,7 +44,7 @@ Scalable, secure, observable services on Kubernetes and AWS
 ### 🛠️ Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=java,spring,kotlin,postgres,redis,kafka,rabbitmq,docker,kubernetes,aws,gcp,terraform,githubactions,linux,idea&perline=8" />
+  <img src="https://skillicons.dev/icons?i=java,spring,kotlin,postgres,redis,kafka,rabbitmq,docker,kubernetes,aws,gcp,terraform,githubactions,linux,idea&perline=15" width="560" />
 </p>
 
 <p align="center">
@@ -65,19 +63,7 @@ Scalable, secure, observable services on Kubernetes and AWS
      are included in the aggregates. Only this rendered image is committed;
      no repo names or raw data are exposed. -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/main/metrics.svg" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=prathap2k&theme=tokyonight&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=prathap2k&theme=tokyo-night&hide_border=true&area=true" width="100%" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/output/github-snake-dark.svg" width="100%" />
+  <img src="https://raw.githubusercontent.com/prathap2k/prathap2k/main/metrics.svg" width="480" />
 </p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=120&section=footer" width="100%" />
