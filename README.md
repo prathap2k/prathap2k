@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="www.linkedin.com/in/prathapthotapalle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://linkedin.com/in/prathapthotapalle"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
   <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/prathap2k/prathap2k/data/org-count.json&style=for-the-badge&logo=github&logoColor=white" />
 </p>
 
